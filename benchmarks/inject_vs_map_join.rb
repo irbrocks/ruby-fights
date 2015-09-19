@@ -1,6 +1,6 @@
 require 'benchmark/ips'
 
-messages = Array.new(50, 'item')
+messages = Array.new(5, 'item')
 messages_for_map = messages.dup
 
 Benchmark.ips do |x|

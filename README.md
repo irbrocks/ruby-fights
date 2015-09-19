@@ -13,13 +13,13 @@ Feel free to fork this project and add your own fights. The strutucture of every
 
 ## Enumerable
 
-* [`inject` VS `map` and `join`]()
+* [`inject` VS `map` and `join`](#inject-vs-map-and-join)
 
 # Fights
 
 ## Enumerable 
 
-### `inject` VS `map` and `join`
+### inject VS map and join
 
 I have an Array of strings that we want to concatenate. Before concatenate them, I want to enclose them in a HTML li tag, because it will be added to a list. To perform this action I can [map](http://ruby-doc.org/core-2.2.3/Enumerable.html#method-i-map) every item and edit them, and after join resulting Array. Another solution is to use [inject](http://ruby-doc.org/core-2.2.3/Enumerable.html#method-i-inject) to concatenate items enclosing them in the tag.
 
@@ -36,6 +36,6 @@ Comparison:
               inject:   122439.4 i/s - 1.98x slower
 ```
 
-Benchmark source: [inject\_vs\_map\_join]()
+Benchmark source: [inject\_vs\_map\_join](https://github.com/irbrocks/ruby-fights/blob/master/benchmarks/inject_vs_map_join.rb)
 
 `inject` method is slower than `map` + `join`. The benchmark source use an array of 10 items, if we increase the number of elements the difference between methods is getting bigger. For example, if we set an array with 50 items, inject is 2.78x slower than `map` + `join`.
